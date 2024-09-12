@@ -8,6 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const msg = "Embedded DOM loaded @" + new Date();
   clog(msg);
   window.parent.postMessage({ msg }, "*");
+
+  const btnMsg = document.getElementById("sendMessageBtn");
+  btnMsg.addEventListener("click", (event) => {
+    clog("Button clicked");
+    console.log(event.target);
+    window.parent.postMessage(
+      {
+        msg: "Button clicked in the embedded link....",
+      },
+      "*"
+    );
+  });
 });
 
 // HELPER FUNCTIONS
