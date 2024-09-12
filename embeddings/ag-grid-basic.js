@@ -12,5 +12,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // HELPER FUNCTIONS
 function clog(str) {
-  console.log(`From Embedded: ${str}`);
+  console.log(`From Embedded via cdn: ${str}`);
 }
