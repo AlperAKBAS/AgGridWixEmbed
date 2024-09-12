@@ -96,20 +96,5 @@
     <!-- HTML Specific -->
   </body>
 
-  <script id="collect-settings">
-    function clog(str) {
-      console.log(`From Embedded: ${str}`);
-    }
-    window.onmessage = (event) => {
-      clog(event);
-      clog(event.target);
-      clog(event.data);
-    };
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const msg = "Embedded DOM loaded";
-      clog(msg);
-      window.parent.postMessage({ msg }, "*");
-    });
-  </script>
+  <script id="collect-settings"></script>
 </html>
